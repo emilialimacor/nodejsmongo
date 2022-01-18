@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=PT+Sans&display=swap');
+
+:root {
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  margin: 15px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.nav-brand {
+  margin: auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-shadow {
+  border: 1px var(--border-btn);
+  box-shadow: 2px 2px 2px #e9ecef;
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.inline {
+  display: inline-block;
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #423052, #745ea1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header nav {
+  background-color: #a6cf98;
+  padding: 1em 0;
+  width: 100%;
+}
+
+#main {
+  margin-top: 6em;
+  font-family: 'Karla', sans-serif;
+}
+
+#main.container.box-nav > a {
+  text-decoration: none;
+  margin-bottom: auto;
+  font-size: 1em;
+  padding: 0.5em 1em;
+}
+
+#main.container form {
+  margin: 2em 0;
+}
+
+table {
+  border-spacing: 0px;
+  width: 90%;
+}
+
+.table td,
+.table th {
+  padding: 0.75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.table td > a.btn {
+  padding: 0.3em 1em;
+  font-size: 1.1em;
+  margin: 0 0.2em;
+}
+
+.table tr:hover {
+  background-color: #d4b499;
+}
+
+.table tr:hover td > a {
+  box-shadow: none;
+}
+
+.table .thead-dark th {
+  color: rgb(7, 7, 7);
+  background-color: var(--dark);
+  border-color: #32383e;
+}
+
+/* responsividade do form */
+
+@media only screen and (max-width: 1920px) { 
+  /* template do addClient e editarClient */
+
+  .form-title {
+    margin-top: 2em;
+  }
+
+  .form-title > h2 {
+    margin-top: 2em;
+    padding: 0.5em 0;
+  }
+
+  .novo_cliente {
+    max-width: 786px;
+    margin: auto;
+  }
+
+  #editarClient .form-group,
+  #addClient .form-group {
+    margin: 0.4em 0;
+  }
+
+  #editarClient .form-group input[type='text'], .form-group input[type='tel'],
+  #addClient .form-group input[type='text'], .form-group input[type='tel'] {
+    width: 100%;
+    padding: 0.6em 1em;
+    margin: 0.5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+  }
+  #editarClient .form-group .btn,
+  #addClient .form-group .btn {
+    padding: 0.4em 0.5em;
+    background-color: #7da570;
+    border: 1px;
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+    border-radius: 2em;
+    margin: 0.5em 0;
+  }
+
+  #editarClient .form-group .btn:hover,
+  #addClient .form-group.btn:hover {
+    background-color: var(--dark);
+    color: var(--border);
+  }
+}
